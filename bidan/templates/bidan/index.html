@@ -41,7 +41,7 @@
       </div>
       {% endif %}
 
-      <form class="form-signin" id="signin" action="{% url 'bidan:get' %}" method="post">
+      <form class="form-signin" id="signin" action="{% url 'bidan:auth' %}" method="post">
         {% csrf_token %}
         <h2 class="form-signin-heading">Get form by</h2>
         <div class="container-fluid">
@@ -89,9 +89,9 @@
 
       <hr/>
       
-      {% if xlsfiles %}
+      {% if sumxlsfile %}
         <p style="text-align:center;">
-        <a href="{% url 'bidan:download_all' xlsfiles %}" class="btn btn-success btn-download" role="button">
+        <a href="{% url 'bidan:download_all' sumxlsfile %}" class="btn btn-success btn-download" role="button">
         <span class="glyphicon glyphicon-download"></span>
         Download all XLS</a>
         </p>
